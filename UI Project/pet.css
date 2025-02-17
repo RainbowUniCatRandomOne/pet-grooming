@@ -1,0 +1,1076 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 50px;
+    background-color: #FFD700;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links,
+.hamburger-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.nav-links li a,
+.hamburger-links li a {
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-links li a:hover,
+.hamburger-links li a:hover {
+    color: #ff6347;
+}
+
+/* Rounded Rectangle Highlight for Navbar */
+.highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    border: 3px solid black;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 31.5%;
+    background-color: #000;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.dropdown-menu li a {
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Down arrow for "Services" */
+.dropdown>.nav-item {
+    position: relative;
+    padding-right: 20px;
+}
+
+.dropdown>.nav-item::after {
+    content: "▼";
+    font-size: 10px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.dropdown>.nav-item:hover::after {
+    color: #ff6347;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.hamburger:hover .line {
+    background-color: #ff6347;
+}
+
+/* Hamburger Links */
+.hamburger-links {
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Show Hamburger Links on Hover */
+.hamburger:hover~.hamburger-links,
+.hamburger-links:hover {
+    display: flex;
+}
+
+/* Responsive Styles */
+@media (max-width: 950px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-links {
+        display: none;
+    }
+
+    .hamburger:hover~.hamburger-links,
+    .hamburger-links:hover {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: url('assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    /* Align content to the left */
+    align-items: center;
+    text-align: left;
+    /* Align text to the left */
+    padding: 0 20px;
+    margin-left: 7%;
+    /* Match the left position of the TidyTails words */
+    padding: 20px 20px 0;
+}
+
+.hero-content {
+    max-width: 600px;
+    /* Limit the width of the hero content */
+}
+
+.hero-content h1 {
+    font-family: 'Cocon', sans-serif;
+    /* Apply Cocon font */
+    font-size: 37px;
+    /* Set font size to 37px */
+    color: #000000;
+    /* Set color for h1 (e.g., gold) */
+}
+
+.hero-content p {
+    font-family: 'Inter', sans-serif;
+    /* Apply Inter font */
+    font-weight: 200;
+    /* Extra Light weight */
+    font-size: 18px;
+    color: #919191;
+    /* Set color for p (e.g., dark gray) */
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    width: 400px;
+    /* Set exact width */
+    height: 80px;
+    /* Set exact height */
+    background: linear-gradient(106.92deg, #89CFF0 38.34%, #00ADFF 71.57%);
+    /* Diagonal gradient */
+    color: #fff;
+    border-radius: 35px;
+    /* Rounded corners */
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Inter', sans-serif;
+    /* Adjust font size as needed */
+    border: none;
+    /* Remove default button border */
+    cursor: pointer;
+    /* Add pointer cursor on hover */
+    transition: background 0.3s ease;
+    /* Smooth transition for hover effect */
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07),
+        0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198),
+        0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275),
+        0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035),
+        0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
+        0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    /* Shadow */
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    text-align: center;
+    /* Center text */
+}
+
+.cta-button:hover {
+    background: linear-gradient(106.92deg, #00ADFF 38.34%, #89CFF0 71.57%);
+    /* Reverse gradient on hover */
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    min-height: 100vh;
+    scroll-margin-top: 60px;
+}
+
+/* Style for the right-side image */
+.right-image {
+    position: absolute;
+    /* Keeps the image fixed on the screen */
+    top: 53.5%;
+    /* Adjust the vertical position */
+    right: 10%;
+    /* Positions the image on the right side */
+    transform: translateY(-50%);
+    /* Centers the image vertically */
+    z-index: 100;
+    /* Ensures the image stays above other content */
+}
+
+.right-image img {
+    width: 480px;
+    /* Adjust the width of the image */
+    height: auto;
+    /* Maintains the aspect ratio */
+    display: block;
+    /* Ensures the image behaves as a block element */
+}
+
+@media (max-width: 768px) {
+    .right-image {
+        right: 10px;
+        /* Move the image closer to the right edge on smaller screens */
+    }
+
+    .right-image img {
+        width: 480px;
+        /* Reduce the image size on smaller screens */
+    }
+}
+
+/* Style for the left-side container */
+.left-container {
+    position: absolute;
+    /* Keeps the container fixed on the screen */
+    top: 35%;
+    /* Adjust the vertical position */
+    left: 7%;
+    /* Positions the container on the left side */
+    transform: translateY(-50%);
+    /* Centers the container vertically */
+    z-index: 999;
+    /* Ensures the container stays behind the NavBar */
+    display: flex;
+    /* Aligns the text and logo horizontally */
+    align-items: center;
+    /* Centers the items vertically */
+    gap: 10px;
+    /* Adds space between the text and logo */
+}
+
+/* Style for the Cocon text */
+.cocon-text .cocon-font {
+    font-family: 'Cocon', sans-serif;
+    /* Applies the Cocon Font */
+    font-size: 135px;
+    /* Adjust the font size */
+    color: #FFD700;
+    /* Adjust the text color */
+    margin: 0;
+    /* Removes default margin */
+}
+
+/* Style for the left-side image */
+.left-image img {
+    width: 150px;
+    /* Adjust the width of the image */
+    height: auto;
+    /* Maintains the aspect ratio */
+    display: block;
+    /* Ensures the image behaves as a block element */
+}
+
+@media (max-width: 768px) {
+    .left-container {
+        left: 10px;
+        /* Move the container closer to the left edge on smaller screens */
+    }
+
+    .cocon-text .cocon-font {
+        font-size: 18px;
+        /* Reduce the font size on smaller screens */
+    }
+
+    .left-image img {
+        width: 100px;
+        /* Reduce the image size on smaller screens */
+    }
+}
+
+/* About Section */
+#about {
+    position: relative;
+    padding: 60px 20px;
+    background-color: #fff;
+    min-height: 100vh;
+    scroll-margin-top: 60px;
+}
+
+.about-all {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    top: -130%;
+}
+
+.about-content p {
+    font-family: 'Cocon', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 800%;
+    line-height: 1.2;
+    /* Better line spacing */
+    margin-bottom: 20px;
+    /* Space below the heading */
+    color: #FFD700;
+    /* Gold color for the heading */
+    position: absolute;
+    /* Position it absolutely */
+    top: -200%;
+    /* Adjust vertical position */
+    left: -5%;
+    /* Adjust horizontal position */
+}
+
+.about-heading {
+    position: absolute;
+    width: 70%;
+    height: auto;
+    font-family: 'Cocon', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 300%;
+    line-height: 95.6%;
+    color: #000000;
+    top: 150%;
+    /* Moved higher */
+    left: -5%;
+}
+
+.about-description {
+    position: absolute;
+    width: 68%;
+    height: auto;
+    font-family: 'Cocon', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #000000;
+    top: 520%;
+    /* Moved higher */
+    left: -5%;
+    opacity: 50%;
+}
+
+.information {
+    position: absolute;
+    width: 320px;
+    height: auto;
+    font-family: 'Cocon', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #89CFF0;
+    top: -200%;
+    /* Adjusted to position higher */
+    right: 5%;
+    /* Moved further to the right */
+}
+
+.info-item {
+    margin-bottom: -5%;
+}
+
+.info-item h2 {
+    font-size: 28px;
+    line-height: 1.5;
+    color: #89CFF0;
+    margin-bottom: 20px;
+}
+
+.info-item p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #000000;
+    margin: 0;
+}
+
+/* Services Section */
+#services {
+    position: relative;
+    padding: 60px 20px;
+    min-height: 100vh;
+    scroll-margin-top: 60px;
+    margin-top: -14%;
+}
+
+.services-header {
+    position: sticky;
+    /* Keep it sticky if needed */
+    top: -100px;
+    /* Adjust this value to move it higher */
+    font-family: 'Cocon', sans-serif;
+    font-size: 700%;
+    line-height: 95.6%;
+    color: #FFD700;
+    text-align: center;
+    z-index: 100;
+    /* Ensure it stays on top */
+    background-color: #fff;
+    /* Match the background color */
+    padding: 55px 0;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100;
+    /* Space below the sticky header */
+}
+
+.service-item {
+    width: 23%;
+    /* 4 images in a row */
+    margin-bottom: 20px;
+    text-align: center;
+    /* Center the content */
+}
+
+.service-item img {
+    width: 80%;
+    height: auto;
+    display: block;
+    padding-left: 10%;
+    /* Move only the image to the right */
+}
+
+.service-item a {
+    text-decoration: none;
+    /* Remove underline */
+    color: inherit;
+    /* Inherit text color */
+    display: block;
+    /* Make the entire area clickable */
+}
+
+.service-item a:hover {
+    opacity: 0.8;
+    /* Add hover effect */
+}
+
+/* Service Names */
+.service-name {
+    font-family: 'Cocon', sans-serif;
+    /* Apply Cocon font */
+    font-size: 40px;
+    /* Adjust font size as needed */
+    color: #000000;
+    /* Blue color */
+    text-align: center;
+    /* Center the text */
+    margin-top: 10px;
+    /* Add space between the image and text */
+}
+
+/* New Content Styles */
+.service-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    /* Adjust as needed */
+    padding: 0 20px;
+    /* Add padding for spacing */
+    margin-bottom: -20%;
+    scroll-margin-top: 220px;
+    /* Adjust this value as needed */
+}
+
+.image-container {
+    position: relative;
+    width: 676px;
+    height: 791px;
+}
+
+.image-fur_cutting {
+    width: 55%;
+    height: 55%;
+    object-fit: cover;
+    /* Ensures the image covers the container area */
+    padding-left: 25%;
+}
+
+.image-skin_care {
+    width: 55%;
+    height: 55%;
+    object-fit: cover;
+    /* Ensures the image covers the container area */
+    padding-left: 130%;
+}
+
+.image-bathing {
+    width: 55%;
+    height: 55%;
+    object-fit: cover;
+    /* Ensures the image covers the container area */
+    padding-left: 25%;
+}
+
+.image-spa_time {
+    width: 55%;
+    height: 55%;
+    object-fit: cover;
+    /* Ensures the image covers the container area */
+    padding-left: 130%;
+}
+
+
+.text-container {
+    width: 50%;
+    /* Adjust as needed */
+}
+
+.fur-cutting {
+    font-family: 'Cocon', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 400%;
+    line-height: 95.6%;
+    color: #89CFF0;
+    margin: 0;
+    margin-top: -50%;
+    margin-left: 10%;
+    text-decoration: underline;
+    /* Underline the text */
+}
+
+.description_fur_cutting {
+    font-family: 'Cocon', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 200%;
+    line-height: 150%;
+    color: #000000;
+    margin: 20px 0;
+    margin-left: 10%;
+}
+
+.price_fur_cutting {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 300%;
+    line-height: 95.6%;
+    color: #89CFF0;
+    margin: 0;
+    margin-left: 10%;
+}
+
+.skin-care {
+    font-family: 'Cocon', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 400%;
+    line-height: 95.6%;
+    color: #89CFF0;
+    margin: 0;
+    margin-top: -50%;
+    margin-left: -76%;
+    text-decoration: underline;
+    /* Underline the text */
+}
+
+.description_skin_care {
+    font-family: 'Cocon', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 200%;
+    line-height: 150%;
+    color: #000000;
+    margin: 20px 0;
+    margin-left: -76%;
+}
+
+.price_skin_care {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 300%;
+    line-height: 95.6%;
+    color: #89CFF0;
+    margin: 0;
+    margin-left: -76%;
+}
+
+.bathing {
+    font-family: 'Cocon', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 400%;
+    line-height: 95.6%;
+    color: #89CFF0;
+    margin: 0;
+    margin-top: -50%;
+    margin-left: 10%;
+    text-decoration: underline;
+    /* Underline the text */
+}
+
+.description_bathing {
+    font-family: 'Cocon', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 200%;
+    line-height: 150%;
+    color: #000000;
+    margin: 20px 0;
+    margin-left: 10%;
+}
+
+.price_bathing {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 300%;
+    line-height: 95.6%;
+    color: #89CFF0;
+    margin: 0;
+    margin-left: 10%;
+}
+
+.spa-time {
+    font-family: 'Cocon', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 400%;
+    line-height: 95.6%;
+    color: #89CFF0;
+    margin: 0;
+    margin-top: -50%;
+    margin-left: -76%;
+    text-decoration: underline;
+    /* Underline the text */
+}
+
+.description_spa_time {
+    font-family: 'Cocon', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 200%;
+    line-height: 150%;
+    color: #000000;
+    margin: 20px 0;
+    margin-left: -76%;
+}
+
+.price_spa_time {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 300%;
+    line-height: 95.6%;
+    color: #89CFF0;
+    margin: 0;
+    margin-left: -76%;
+}
+
+.up-arrow {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    right: 20px;
+    /* Adjust as needed */
+    top: 50%;
+    /* Centered vertically in the header */
+    transform: translateY(-50%);
+    font-size: 2rem;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.up-arrow.visible {
+    display: block;
+    /* Show the arrow when the "visible" class is added */
+}
+
+/* Reviews Section */
+#reviews {
+    position: relative;
+    padding: 60px 20px;
+    background-color: #fff;
+    min-height: 100vh;
+    scroll-margin-top: 60px;
+    overflow: hidden;
+}
+
+/* Reviews header styles */
+.reviews-header {
+    text-align: center;
+    margin-bottom: 20px;
+    /* adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews-header h2 {
+    font-family: 'Cocon', sans-serif;
+    font-size: 600%;
+    line-height: 95.6%;
+    color: #FFD700;
+    text-align: center;
+    z-index: 10;
+    padding: 55px 0;
+}
+
+.reviews-header .line {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin-top: -8%;
+    /* space below the header text */
+}
+
+.scrolling-lines {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+.scrolling-line {
+    display: flex;
+    width: 200%;
+    /* Double the width to accommodate duplicates */
+}
+
+.top-line {
+    animation: scroll-left 20s linear infinite;
+}
+
+.bottom-line {
+    animation: scroll-right 20s linear infinite;
+}
+
+.rectangle {
+    width: 450px;
+    height: 200px;
+    background: #FFFFFF;
+    box-shadow: 0px 333px 133px rgba(0, 0, 0, 0.01),
+        0px 187px 112px rgba(0, 0, 0, 0.05),
+        0px 83px 83px rgba(0, 0, 0, 0.09),
+        0px 21px 46px rgba(0, 0, 0, 0.1),
+        0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 47.6471px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    /* Optional: center content inside */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin-left: 5%;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Move left by 50% of the container width */
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+        /* Start from the middle */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Move right to the original position */
+    }
+}
+
+/* “Meet Me” */
+.meet-me {
+    position: absolute;
+    width: 554px;
+    height: 129px;
+    font-family: 'Cocon', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 95.6%;
+    /* equals 129px */
+    color: #89CFF0;
+    /* Adjust top/left as needed */
+    top: -4%;
+    left: 14%;
+}
+
+/* image 47 */
+.image-47 {
+    position: absolute;
+    width: 30%;
+    height: 38%;
+    background: url('assets/meet_me.png') no-repeat center/cover;
+    border: 5px solid #000000;
+    border-radius: 50px;
+    /* Adjust positioning */
+    top: -2.5%;
+    left: 60%;
+}
+
+/* Bio text (the long paragraph) */
+.bio-text {
+    position: absolute;
+    width: 800px;
+    height: 396px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 95.6%;
+    text-align: center;
+    color: #000000;
+    /* Adjust positioning */
+    top: 3%;
+    left: 2%;
+}
+
+/* Footer Styles */
+.yellow-footer {
+    background-color: #FFD700;
+    /* Yellow background */
+    padding: 40px 20px;
+    /* Add padding for spacing */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+}
+
+.footer-content {
+    max-width: 1200px;
+    /* Limit the width of the footer content */
+    margin: 0 auto;
+    /* Center the footer content */
+    display: flex;
+    justify-content: space-between;
+    /* Space out the three containers */
+    gap: 40px;
+    /* Add spacing between containers */
+}
+
+/* Left Container */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align items to the left */
+    gap: 20px;
+    /* Add spacing between logo and icons */
+}
+
+.footer-logo {
+    width: 300px;
+    /* Adjust logo size */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Add spacing between icon rows */
+}
+
+.icon-row {
+    display: flex;
+    gap: 10px;
+    /* Add spacing between icons */
+}
+
+.icon-row img {
+    width: 40px;
+    /* Adjust icon size */
+    height: 40px;
+    transition: transform 0.3s ease;
+    /* Add hover effect */
+}
+
+.icon-row img:hover {
+    transform: scale(1.1);
+    /* Enlarge icons on hover */
+}
+
+/* Middle Container */
+.footer-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Add spacing between contact items */
+}
+
+.contact-item h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #000;
+    /* Black header */
+    margin: 0;
+}
+
+.contact-item p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    /* White text */
+    margin: 5px 0 0 0;
+}
+
+/* Right Container */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Add spacing between elements */
+}
+
+.footer-right h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #000;
+    /* Black header */
+    margin: 0;
+}
+
+.footer-input,
+.footer-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    /* Black border */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #333;
+    /* Dark gray text */
+    background-color: #fff;
+    /* White background */
+}
+
+.footer-textarea {
+    height: 100px;
+    /* Adjust height for textarea */
+    resize: none;
+    /* Disable resizing */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        /* Stack containers vertically on smaller screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        align-items: center;
+        /* Center align items on smaller screens */
+    }
+}

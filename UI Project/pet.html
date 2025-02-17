@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIDY Tails</title>
+    <link rel="stylesheet" href="pet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Left-side container for Cocon words and logo -->
+    <div class="left-container">
+        <div class="cocon-text">
+            <p class="cocon-font">TidyTails</p>
+        </div>
+        <div class="left-image">
+            <img src="assets/yellow_logo.png" alt="Yellow Logo">
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="assets/black_logo.png" alt="TIDY Tails Logo">
+        </div>
+        <nav>
+            <!-- Hamburger Menu -->
+            <div id="hamburger-icon" class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <!-- Navigation Links for Desktop -->
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="nav-item">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#Fur Cutting">Fur Cutting</a></li>
+                        <li><a href="#Skin Care">Skin Care</a></li>
+                        <li><a href="#Bathing">Bathing</a></li>
+                        <li><a href="#Spa Time">Spa Time</a></li>
+                    </ul>
+                </li>
+                <li><a href="#reviews" class="nav-item">Reviews</a></li>
+                <li><a href="#connect" class="nav-item">Connect</a></li>
+                <li><a href="booking.html" class="nav-item" target="_blank">Book</a></li>
+            </ul>
+
+            <!-- Navigation Links for Hamburger Menu -->
+            <ul class="hamburger-links">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="nav-item">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#Fur Cutting">Fur Cutting</a></li>
+                        <li><a href="#Skin Care">Skin Care</a></li>
+                        <li><a href="#Bathing">Bathing</a></li>
+                        <li><a href="#Spa Time">Spa Time</a></li>
+                    </ul>
+                </li>
+                <li><a href="booking.html" class="nav-item" target="_blank">Book</a></li>
+                <li><a href="#reviews" class="nav-item">Reviews</a></li>
+                <li><a href="#connect" class="nav-item">Connect</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sections -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Fluffy Tails, Shiny Nails</h1>
+            <p>TidyTails is a small pet grooming business committed to keeping your pets clean, healthy, and happy. We
+                offer grooming services to keep your little friends looking their best.</p>
+            <a href="booking.html" class="cta-button">Book Your Slot</a>
+        </div>
+    </section>
+
+    <!-- Right-side image -->
+    <div class="right-image">
+        <img src="assets/cat.png" alt="Right Side Image">
+    </div>
+
+    <section id="about">
+        <div class="about-all">
+            <div class="about-content">
+                <p>About Us</p>
+            </div>
+            <div class="about-heading">
+                <p>At TidyTails Pet Grooming, we are dedicated to providing exceptional care for your pets.</p>
+            </div>
+            <div class="about-description">
+                <p>Founded in 2010 by a team of passionate pet lovers, TidyTails began as a small neighborhood grooming
+                    salon and has since grown into a trusted name in pet care. Our focus is on creating a calm,
+                    stress-free environment where your pet’s health and comfort come first. With years of experience,
+                    our skilled groomers specialize in custom cuts tailored to each pet's unique needs. Whether it's a
+                    simple trim or a full grooming session, TidyTails offers a wide range of services designed to keep
+                    your furry friend looking and feeling their best. Your pet’s satisfaction is our top priority, and
+                    we’re proud to offer the best in grooming care.</p>
+            </div>
+            <div class="information">
+                <div class="info-item">
+                    <h2>Information</h2>
+                    <p>We welcome animals of all shapes and sizes, whether walking, flying, or hopping!</p>
+                </div>
+                <div class="info-item">
+                    <h2>Phone</h2>
+                    <p>+1 (123) 123-1234</p>
+                </div>
+                <div class="info-item">
+                    <h2>Location</h2>
+                    <p>123 Goldforest Drive, Unit 15A Ottawa, ON K5N 5T6</p>
+                </div>
+                <div class="info-item">
+                    <h2>Hours</h2>
+                    <p>M Closed<br>T-W 9 a.m. to 5 p.m.<br>Th 12 p.m. to 8 p.m.<br>F 9 a.m. to 5 p.m.<br>Sa 9 a.m. to 5
+                        p.m.<br>Su Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="services-header">
+            <p>Services</p>
+            <!-- Up arrow: hidden by default -->
+            <a href="#services" class="up-arrow" id="upArrow">↑</a>
+        </div>
+
+        <!-- Service items container -->
+        <div id="services-container" class="services-container">
+            <div class="service-item">
+                <a href="#fur-cutting">
+                    <img src="assets/scissors.png" alt="Placeholder 1">
+                    <p class="service-name">Fur Cutting</p>
+                </a>
+            </div>
+            <div class="service-item">
+                <a href="#skin-care">
+                    <img src="assets/lotion.png" alt="Placeholder 2">
+                    <p class="service-name">Skin Care</p>
+                </a>
+            </div>
+            <div class="service-item">
+                <a href="#bathing">
+                    <img src="assets/tub.png" alt="Placeholder 3">
+                    <p class="service-name">Bathing</p>
+                </a>
+            </div>
+            <div class="service-item">
+                <a href="#spa-time">
+                    <img src="assets/leaf.png" alt="Placeholder 4">
+                    <p class="service-name">Spa Time</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Service details sections -->
+        <div class="service-details" id="fur-cutting">
+            <!-- Content for Fur Cutting -->
+            <div class="image-container">
+                <img src="assets/fur_cutting.png" alt="Fur Cutting" class="image-fur_cutting">
+            </div>
+            <div class="text-container">
+                <a href="booking.html?service=fur_cutting" class="service-link">
+                    <h2 class="fur-cutting">Fur Cutting >></h2>
+                </a>
+                <ul class="description_fur_cutting">
+                    <li>Breed-specific cuts</li>
+                    <li>Hygiene trims</li>
+                    <li>Comfort and style</li>
+                    <li>Mat and tangle removal</li>
+                    <li>Puppy-friendly trims</li>
+                    <li>Tail and paw shaping</li>
+                </ul>
+                <p class="price_fur_cutting">Starting from $35+</p>
+            </div>
+        </div>
+
+        <!-- Repeat similar blocks for Skin Care, Bathing, and Spa Time -->
+        <div class="service-details" id="skin-care">
+            <!-- Skin Care content -->
+            <div class="image-container">
+                <img src="assets/skin_care.png" alt="Skin Care" class="image-skin_care">
+            </div>
+            <div class="text-container">
+                <a href="booking.html?service=skin_care" class="service-link">
+                    <h2 class="skin-care">Skin Care >></h2>
+                </a>
+                <ul class="description_skin_care">
+                    <li>Sensitive skin care</li>
+                    <li>Soothing applications</li>
+                    <li>Hydrating therapies</li>
+                    <li>Allergy relief solutions</li>
+                    <li>Anti-itch treatments</li>
+                    <li>Medicated baths</li>
+                </ul>
+                <p class="price_skin_care">Starting from $40+</p>
+            </div>
+        </div>
+
+        <div class="service-details" id="bathing">
+            <!-- Bathing content -->
+            <div class="image-container">
+                <img src="assets/bathing.png" alt="Bathing" class="image-bathing">
+            </div>
+            <div class="text-container">
+                <a href="booking.html?service=bathing" class="service-link">
+                    <h2 class="bathing">Bathing >></h2>
+                </a>
+                <ul class="description_bathing">
+                    <li>Coat refreshing treatments</li>
+                    <li>Irritation-free care</li>
+                    <li>Tailored shampoos for different coat types</li>
+                    <li>Hydrating and nourishing formulas</li>
+                    <li>Stress-free bathing process</li>
+                </ul>
+                <p class="price_bathing">Starting from $25+</p>
+            </div>
+        </div>
+
+        <div class="service-details" id="spa-time">
+            <!-- Spa Time content -->
+            <div class="image-container">
+                <img src="assets/spa_time.png" alt="Spa Time" class="image-spa_time">
+            </div>
+            <div class="text-container">
+                <a href="booking.html?service=spa_time" class="service-link">
+                    <h2 class="spa-time">Spa Time >></h2>
+                </a>
+                <ul class="description_spa_time">
+                    <li>Soothing baths</li>
+                    <li>Relaxing paw soaks</li>
+                    <li>Gentle facials</li>
+                    <li>Tailored pampering</li>
+                    <li>Aromatherapy options</li>
+                    <li>Luxurious care for ultimate relaxation</li>
+                </ul>
+                <p class="price_spa_time">Starting from $50+</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <div class="reviews-header">
+            <h2>Reviews</h2>
+            <div class="line"></div> <!-- This line will now be below the header text -->
+        </div>
+
+        <!-- Scrolling rectangles container -->
+        <div class="scrolling-line top-line">
+            <div class="rectangle" id="review1">Review 1</div>
+            <div class="rectangle" id="review2">Review 2</div>
+            <div class="rectangle" id="review3">Review 3</div>
+            <div class="rectangle" id="review4">Review 4</div>
+            <!-- Duplicate the rectangles for seamless looping -->
+            <div class="rectangle" id="review5">Review 1</div>
+            <div class="rectangle" id="review6">Review 2</div>
+            <div class="rectangle" id="review7">Review 3</div>
+            <div class="rectangle" id="review8">Review 4</div>
+        </div>
+        <div class="scrolling-line bottom-line">
+            <div class="rectangle" id="review9">Review A</div>
+            <div class="rectangle" id="review10">Review B</div>
+            <div class="rectangle" id="review11">Review C</div>
+            <div class="rectangle" id="review12">Review D</div>
+            <!-- Duplicate items if needed for a seamless loop -->
+        </div>
+    </section>
+
+    <section id="connect">
+        <!-- Container for the “above yellow block” content -->
+        <div class="connect-content" style="position: relative; height: 1500px;">
+            <!-- “Meet Me” text -->
+            <div class="meet-me">Meet Me</div>
+
+            <!-- Image (image 47) -->
+            <div class="image-47"></div>
+
+            <!-- Bio text -->
+            <div class="bio-text">
+                Hi! I’m Megan, a pet groomer passionate about keeping your furry friends happy, healthy, and looking
+                their best.
+                With 10 years of experience, I specialize in stress-free grooming tailored to each pet’s unique needs.
+                About 3
+                years ago, I started TidyTails to create a grooming experience that’s as loving and unique as your pets.
+                Whether
+                it’s a fresh cut, a soothing bath, or a nail trim, I’m here to pamper your pets with care and love.
+                Can’t wait to
+                meet your fur babies! 🐾✨
+            </div>
+
+            <!-- (Other contact elements, icons, logos, etc. can be added here as needed.) -->
+        </div>
+    </section>
+
+    <!-- Yellow Footer -->
+    <footer class="yellow-footer">
+        <div class="footer-content">
+            <!-- Left Container -->
+            <div class="footer-left">
+                <!-- Logo -->
+                <img src="assets/logo_plain.png" alt="TidyTails Logo" class="footer-logo">
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <div class="icon-row">
+                        <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="assets/meta.png" alt="Meta"></a>
+                    </div>
+                    <div class="icon-row">
+                        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="assets/tiktok.png" alt="TikTok"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Container -->
+            <div class="footer-middle">
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <p>+1 (123) 123-1234</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>TidyTails@tidytails.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Address</h3>
+                    <p>123 Goldforest Drive, Unit 15A Ottawa, ON K5N 5T6</p>
+                </div>
+            </div>
+
+            <!-- Right Container -->
+            <div class="footer-right">
+                <h3>Drop Me a Text!</h3>
+                <input type="email" placeholder="Email Address..." class="footer-input">
+                <textarea placeholder="Type your message here!" class="footer-textarea"></textarea>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Array of random reviews
+        const reviews = [
+            "TidyTails is amazing! My dog looks so fresh after every visit.",
+            "Friendly staff and excellent service. Highly recommend!",
+            "My cat loves the spa time. Thank you, TidyTails!",
+            "Professional and caring groomers. My pet feels at home here.",
+            "The best grooming experience in town. Worth every penny!",
+            "My pet always comes back happy and clean. 5 stars!",
+            "Great attention to detail. My dog's fur has never looked better.",
+            "TidyTails is a lifesaver! My pet loves the gentle care.",
+            "Highly professional and affordable. Will definitely return!",
+            "The staff is so kind and patient with my nervous pet.",
+        ];
+
+        // Function to get a random review
+        function getRandomReview() {
+            const randomIndex = Math.floor(Math.random() * reviews.length);
+            return reviews[randomIndex];
+        }
+
+        // Populate reviews in the rectangles
+        document.addEventListener('DOMContentLoaded', function () {
+            const rectangles = document.querySelectorAll('.rectangle');
+            rectangles.forEach(rectangle => {
+                rectangle.textContent = getRandomReview(); // Set a random review
+                rectangle.style.display = 'flex'; // Center the text
+                rectangle.style.justifyContent = 'center';
+                rectangle.style.alignItems = 'center';
+                rectangle.style.fontFamily = 'Inter, sans-serif'; // Apply font
+                rectangle.style.fontSize = '16px'; // Adjust font size
+                rectangle.style.color = '#333'; // Adjust text color
+                rectangle.style.padding = '20px'; // Add padding for better readability
+            });
+        });
+    </script>
+
+
+
+    <script src="pet.js"></script>
+</body>
+
+</html>

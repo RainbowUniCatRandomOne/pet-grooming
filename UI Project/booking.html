@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Appointment - Tidy Tails</title>
+    <link rel="stylesheet" href="booking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="assets/black_logo.png" alt="TIDY Tails Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Tabs Section -->
+    <!-- Tabs Section -->
+    <section id="tabs">
+        <div class="tab-wrapper">
+            <div class="tab-header">
+                <div class="tab" data-tab="details"><span class="tab-number">1</span> Details</div>
+                <div class="tab" data-tab="payment"><span class="tab-number">2</span> Payment</div>
+                <div class="tab" data-tab="confirmation"><span class="tab-number">3</span> Confirmation</div>
+            </div>
+            <div class="tab-line"></div> <!-- Full-width black line -->
+        </div>
+
+        <div class="tab-content" id="details">
+            <!-- Contact Details Section -->
+            <div class="contact-details">
+                <h2 class="contact-details-heading">Contact Details</h2>
+                <!-- Date Section -->
+                <div class="date-section">
+                    <h2 class="date-heading">Date</h2>
+                    <input type="date" id="appointment-date" class="date-picker">
+                    <!-- Horizontal Line -->
+                    <div class="horizontal-line"></div>
+                    <!-- Time Header -->
+                    <h2 class="time-heading">Time</h2>
+                    <!-- Time Selection Layout -->
+                    <div class="time-selection">
+                        <div class="time-option">9:00 AM</div>
+                        <div class="time-option">10:00 AM</div>
+                        <div class="time-option">11:00 AM</div>
+                        <div class="time-option">12:00 PM</div>
+                        <div class="time-option">1:00 PM</div>
+                        <div class="time-option">2:00 PM</div>
+                        <div class="time-option">3:00 PM</div>
+                        <div class="time-option">4:00 PM</div>
+                        <div class="time-option">5:00 PM</div>
+                    </div>
+
+                    <!-- Payment Button -->
+                    <div class="payment-button">
+                        <span class="payment-text">Payment</span>
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+
+
+
+                <div class="contact-inputs">
+                    <!-- Email Input Group -->
+                    <div class="input-group email-group">
+                        <label for="email" class="input-label">Email</label>
+                        <input type="email" id="email" class="input-field" placeholder="Enter Email">
+                    </div>
+                    <!-- Phone Number Input Group -->
+                    <div class="input-group phone-group">
+                        <label for="phone" class="input-label">Phone Number</label>
+                        <input type="tel" id="phone" class="input-field" placeholder="Enter Phone Number">
+                    </div>
+                </div>
+
+                <!-- Text Message Updates Checkbox -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="text-updates" class="checkbox-input">
+                    <label for="text-updates" class="checkbox-label">
+                        Receive text message updates about your booking. Message rates may apply.
+                    </label>
+                </div>
+
+                <div class="contact-details-line"></div>
+            </div>
+
+            <!-- Pet Details Section -->
+            <div class="pet-details">
+                <h2 class="pet-details-heading">Pet Type</h2>
+                <div class="pet-inputs">
+                    <!-- Pet Type Input Group -->
+                    <div class="input-group pet-type-group">
+                        <label for="pet-type" class="input-label">Pet Type</label>
+                        <input type="text" id="pet-type" class="input-field" placeholder="Enter Pet Type">
+                    </div>
+                    <!-- Pet Breed Input Group -->
+                    <div class="input-group pet-breed-group">
+                        <label for="pet-breed" class="input-label">Pet Breed</label>
+                        <input type="text" id="pet-breed" class="input-field" placeholder="Enter Pet Breed">
+                    </div>
+                </div>
+                <div class="pet-details-line"></div>
+
+                <!-- Service Type Section -->
+                <div class="service-details">
+                    <h2 class="service-details-heading">Service Type</h2>
+                    <div class="service-options">
+                        <label>
+                            <input type="radio" name="service-type" value="fur_cutting"> Fur Cutting
+                        </label>
+                        <label>
+                            <input type="radio" name="service-type" value="skin_care"> Skin Care
+                        </label>
+                        <label>
+                            <input type="radio" name="service-type" value="bathing"> Bathing
+                        </label>
+                        <label>
+                            <input type="radio" name="service-type" value="spa_time"> Spa Time
+                        </label>
+                    </div>
+                    <div class="service-details-line"></div> <!-- Separator Line -->
+                </div>
+
+                <!-- Speical Request Type Section -->
+                <div class="input-group requests-details-group">
+                    <h2 class="requests-details-heading">Special Requests</h2>
+                    <input type="text" id="special-requests" class="input-field" placeholder="Enter Special Request...">
+                </div>
+
+                <!-- Vertical Line -->
+                <div class="vertical-line"></div>
+
+            </div>
+
+        </div>
+
+        <div class="tab-content" id="payment">
+            <!-- Contact Details Section -->
+            <div class="contact-details">
+                <h2 class="contact-details-heading">Payment Method</h2>
+                <div class="contact-inputs">
+                    <!-- Email Input Group -->
+                    <div class="input-group card-group">
+                        <label for="card" class="input-label">Card Information</label>
+                        <input type="text" id="card" class="input-field" placeholder="Card Number">
+
+                        <!-- Expiry and CVC Input Fields -->
+                        <div class="bottom-wrapper">
+                            <input type="text" id="expiry" class="input-field left-small-input" placeholder="MM/YY"
+                                maxlength="5">
+                            <input type="text" id="cvc" class="input-field right-small-input" placeholder="CVC"
+                                maxlength="4">
+                        </div>
+
+
+                    </div>
+
+                    <!-- Phone Number Input Group -->
+                    <div class="input-group phone-group">
+                        <label for="phone" class="input-label">Card Holder Name</label>
+                        <input type="tel" id="phone" class="input-field" placeholder="Enter Full Name on Card">
+                    </div>
+                </div>
+
+                <div class="card-details-line"></div>
+            </div>
+
+            <!-- Pet Details Section -->
+            <div class="pet-details">
+                <h2 class="pet-details-heading">Country Or Region</h2>
+                <div class="pet-inputs">
+                    <!-- Country Input Group -->
+                    <div class="input-group country-group">
+                        <label for="country" class="input-label">Country</label>
+                        <input type="text" id="country" class="input-field" placeholder="Choose Country Name"
+                            list="countryList">
+                        <datalist id="countryList">
+                            <option value="United States">
+                            <option value="Canada">
+                            <option value="United Kingdom">
+                            <option value="Australia">
+                            <option value="Germany">
+                                <!-- Add more countries as needed -->
+                        </datalist>
+                    </div>
+
+                    <!-- Pet Breed Input Group -->
+                    <div class="input-group pet-breed-group">
+                        <label for="pet-breed" class="input-label">City</label>
+                        <input type="text" id="pet-breed" class="input-field" placeholder="Enter City Name">
+                    </div>
+                </div>
+
+                <div class="input-group address-group">
+                    <label for="address" class="input-label">Address</label>
+                    <input type="text" id="address" class="input-field" placeholder="Enter Address Line">
+
+                    <!-- State and Postal Code -->
+                    <div class="bottoms-wrapper">
+                        <input type="text" id="state" class="input-field left-small-input" placeholder="State"
+                            maxlength="5">
+                        <div class="divider"></div>
+                        <input type="text" id="postal" class="input-field right-small-input" placeholder="Postal Code"
+                            maxlength="4">
+                    </div>
+
+                    <!-- Suburb with bottom corners rounded -->
+                    <div class="bottomest-wrapper">
+                        <input type="text" id="suburb" class="input-field" placeholder="Suburb">
+                    </div>
+                </div>
+
+
+                <!-- Vertical Line -->
+                <div class="vertical-line"></div>
+
+                <!-- Right Container (Yellow Rectangle) -->
+                <div class="right-container">
+                    <!-- Header -->
+                    <h2 class="review-header">Review Order Details</h2>
+
+                    <!-- Container for saved info and image -->
+                    <div class="review-content">
+                        <!-- Left: Saved Information -->
+                        <div id="saved-info">
+                            <!-- Dynamically populated by JavaScript -->
+                        </div>
+
+                        <!-- Right: Service Image -->
+                        <div class="service-image">
+                            <img id="service-img" src="" alt="Service Image">
+                        </div>
+                    </div>
+
+                    <!-- Booking Fee, Taxes, Subtotal, and Grand Total Section -->
+                    <div class="price-summary">
+                        <div class="price-row">
+                            <span class="price-label">Booking Fee</span>
+                            <span class="price-value">$0.50</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">Taxes</span>
+                            <span class="price-value">$0.50</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">Subtotal</span>
+                            <span class="price-value" id="subtotal">$0.00</span>
+                        </div>
+                        <div class="divider-line"></div>
+                        <div class="price-row grand-total">
+                            <span class="price-label">Grand Total</span>
+                            <span class="price-value" id="grand-total">$0.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Pay Button -->
+                    <div class="pay-button">
+                        <span class="pay-text">Pay</span>
+                        <div class="arrow"></div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="tab-content" id="confirmation">
+            <div class="confirmation-container">
+                <!-- Left Container -->
+                <div class="left-container">
+                    <!-- Tick Image -->
+                    <img src="assets/tick.png" alt="Tick" class="tick-image">
+
+                    <!-- Appointment Confirmed Text -->
+                    <h2 class="appointment-confirmed">Appointment Confirmed</h2>
+
+                    <!-- Date and Time -->
+                    <p class="date-time">27 February, 1300 Hours</p>
+
+                    <!-- Change Appointment and Add to Calendar -->
+                    <div class="appointment-actions">
+                        <div class="action">
+                            <img src="assets/chat.png" alt="Chat" class="action-icon">
+                            <span>Change Appointment</span>
+                        </div>
+                        <div class="action">
+                            <a href="https://calendar.google.com/calendar/u/0/r" target="_blank">
+                                <img src="assets/calendar.png" alt="Calendar" class="action-icon">
+                                <span>Add to Calendar</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion-header">
+                            <span>Appointment Details</span>
+                        </div>
+                        <div class="accordion-content">
+                            <!-- Service Details -->
+                            <div class="detail">
+                                <img src="assets/mic.png" alt="Service" class="detail-icon">
+                                <span class="detail-label">Service:</span>
+                                <span class="detail-value service">Fur Cutting</span>
+                                <img src="assets/fur_cutting.png" alt="Fur Cutting" class="service-image">
+                            </div>
+
+                            <!-- Name -->
+                            <div class="detail">
+                                <img src="assets/name.png" alt="Name" class="detail-icon">
+                                <span class="detail-label">Name:</span>
+                                <span class="detail-value name">John Doe</span>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="detail">
+                                <img src="assets/email.png" alt="Email" class="detail-icon">
+                                <span class="detail-label">Email:</span>
+                                <span class="detail-value email">john.doe@example.com</span>
+                            </div>
+
+                            <!-- Number -->
+                            <div class="detail">
+                                <img src="assets/number.png" alt="Number" class="detail-icon">
+                                <span class="detail-label">Number:</span>
+                                <span class="detail-value number">+1 123 456 7890</span>
+                            </div>
+
+                            <!-- Amount -->
+                            <div class="detail">
+                                <img src="assets/amount.png" alt="Amount" class="detail-icon">
+                                <span class="detail-label">Amount:</span>
+                                <span class="detail-value amount">$35.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thank You Message -->
+                    <div class="thank-you">
+                        <p class="thank-you-text">Thank you for choosing</p>
+                        <img src="assets/logo_plain.png" alt="Tidy Tails Logo" class="thank-you-logo">
+                    </div>
+                </div>
+
+                <!-- Right Container: Big Cat Image -->
+                <div class="cat-container">
+                    <img src="assets/cat2.png" alt="Cat" class="cat-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Edit Appointment Popup -->
+    <div id="change-appointment-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <h2 class="edit-appointment-heading">Edit Appointment</h2>
+
+            <!-- Date Section -->
+            <div class="date-section">
+                <h2 class="date-heading">Date</h2>
+                <input type="date" id="edit-appointment-date" class="date-picker">
+                <!-- Horizontal Line -->
+                <div class="horizontal-line"></div>
+                <!-- Time Header -->
+                <h2 class="time-heading">Time</h2>
+                <!-- Time Selection Layout -->
+                <div class="time-selection">
+                    <div class="time-option">9:00 AM</div>
+                    <div class="time-option">10:00 AM</div>
+                    <div class="time-option">11:00 AM</div>
+                    <div class="time-option">12:00 PM</div>
+                    <div class="time-option">1:00 PM</div>
+                    <div class="time-option">2:00 PM</div>
+                    <div class="time-option">3:00 PM</div>
+                    <div class="time-option">4:00 PM</div>
+                    <div class="time-option">5:00 PM</div>
+                </div>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="contact-inputs">
+                <!-- Email Input Group -->
+                <div class="input-group email-group">
+                    <label for="edit-email" class="input-label">Email</label>
+                    <input type="email" id="edit-email" class="input-field" placeholder="Enter Email">
+                </div>
+                <!-- Phone Number Input Group -->
+                <div class="input-group phone-group">
+                    <label for="edit-phone" class="input-label">Phone Number</label>
+                    <input type="tel" id="edit-phone" class="input-field" placeholder="Enter Phone Number">
+                </div>
+            </div>
+
+            <!-- Pet Details -->
+            <div class="pet-details">
+                <h2 class="pet-details-heading">Pet Type</h2>
+                <div class="pet-inputs">
+                    <!-- Pet Type Input Group -->
+                    <div class="input-group pet-type-group">
+                        <label for="edit-pet-type" class="input-label">Pet Type</label>
+                        <input type="text" id="edit-pet-type" class="input-field" placeholder="Enter Pet Type">
+                    </div>
+                    <!-- Pet Breed Input Group -->
+                    <div class="input-group pet-breed-group">
+                        <label for="edit-pet-breed" class="input-label">Pet Breed</label>
+                        <input type="text" id="edit-pet-breed" class="input-field" placeholder="Enter Pet Breed">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Save Changes Button -->
+            <div class="save-changes-button">
+                <span class="save-text">Save Changes</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 TidyTails Pet Grooming. All rights reserved.</p>
+            <p>Contact us at: +1 (123) 123-1234</p>
+        </div>
+    </footer>
+
+    <script src="booking.js"></script>
+</body>
+
+</html>
